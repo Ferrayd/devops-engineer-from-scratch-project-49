@@ -1,6 +1,8 @@
 import math
 import random
 
+DESCRIPTION = 'Find the greatest common divisor of given numbers.'
+
 
 def find_gcd(num1, num2):
     return math.gcd(num1, num2)

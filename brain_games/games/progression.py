@@ -1,5 +1,7 @@
 import random
 
+DESCRIPTION = 'What number is missing in the progression?'
+
 MIN_LENGTH = 5
 MAX_LENGTH = 10
 MIN_START = 1

@@ -1,6 +1,6 @@
 import random
 
-ROUNDS_COUNT = 3
+DESCRIPTION = 'Answer "yes" if the number is even, otherwise answer "no".'
 
 
 def is_even(number):
@@ -12,10 +12,3 @@ def get_game_data():
     question = str(number)
     correct_answer = 'yes' if is_even(number) else 'no'
     return question, correct_answer
-
-
-def play_even_game(user_name):
-    from brain_games.engine import run_game
-    
-    game_name = 'Answer "yes" if the number is even, otherwise answer "no".'
-    run_game(game_name, user_name, get_game_data)

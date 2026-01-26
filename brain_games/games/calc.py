@@ -1,5 +1,7 @@
 import random
 
+DESCRIPTION = 'What is the result of the expression?'
+
 OPERATORS = ['+', '-', '*']
 
 
@@ -12,7 +14,21 @@ def generate_expression():
 
 
 def calculate_expression(expression):
-    return str(eval(expression))
+    parts = expression.split()
+    num1 = int(parts[0])
+    operator = parts[1]
+    num2 = int(parts[2])
+    
+    if operator == '+':
+        result = num1 + num2
+    elif operator == '-':
+        result = num1 - num2
+    elif operator == '*':
+        result = num1 * num2
+    else:
+        raise ValueError(f'Unknown operator: {operator}')
+    
+    return str(result)
 
 
 def get_game_data():
